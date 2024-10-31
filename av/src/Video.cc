@@ -181,7 +181,8 @@ bool Video::Load(const std::string &_filename)
 
   // Inform the codec that we can handle truncated bitstreams -- i.e.,
   // bitstreams where frame boundaries can fall in the middle of packets
-#if LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(56, 60, 100)
+#if LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(60, 0, 0)
+#elif LIBAVCODEC_VERSION_INT >= AV_VERSION_INT(56, 60, 100)
   if (codec->capabilities & AV_CODEC_CAP_TRUNCATED)
     this->dataPtr->codecCtx->flags |= AV_CODEC_FLAG_TRUNCATED;
 #else
