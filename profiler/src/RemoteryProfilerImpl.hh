@@ -18,6 +18,7 @@
 #ifndef IGNITION_COMMON_REMOTERYPROFILERIMPL_HH_
 #define IGNITION_COMMON_REMOTERYPROFILERIMPL_HH_
 
+#include <cstdint>
 #include <string>
 
 #include "RemoteryConfig.h"
